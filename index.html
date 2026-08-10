@@ -1,20 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>プライバシーポリシー</title>
+    <style>
+      :root {
+        --color-bg: #f5f6fa;
+        --color-surface: #ffffff;
+        --color-text: #1f2430;
+        --color-muted: #5a6270;
+        --color-accent: #4a6cf7;
+        --color-border: #e6e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background: var(--color-bg);
+        color: var(--color-text);
+        font-family: "Hiragino Sans", "Yu Gothic", "Segoe UI", system-ui,
+          -apple-system, sans-serif;
+        line-height: 1.8;
+      }
+
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        background: var(--color-surface);
+        border-radius: 16px;
+        padding: 48px 40px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0 0 32px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--color-accent);
+        color: var(--color-text);
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 32px 0 12px;
+        color: var(--color-accent);
+      }
+
+      h2:first-of-type {
+        margin-top: 0;
+      }
+
+      p {
+        margin: 0 0 8px;
+        color: var(--color-text);
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 1.4em;
+        color: var(--color-text);
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      li::marker {
+        color: var(--color-accent);
+      }
+
+      section + section {
+        margin-top: 8px;
+      }
+
+      section {
+        padding-top: 8px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      section:first-of-type {
+        border-top: none;
+      }
+    </style>
   </head>
   <body>
-<h1>【プライバシーポリシー】</h1>
+    <main>
+      <h1>プライバシーポリシー</h1>
 
-<h2>データ収集について</h2>
-この拡張機能は以下のデータを収集・送信しません：<br>
-- 個人情報<br>
-- ウェブサイト上のデータ<br>
-- ブラウジング履歴<br>
-- その他のユーザーデータ<br>
+      <section>
+        <h2>データ収集について</h2>
+        <p>この拡張機能は以下のデータを収集・送信しません：</p>
+        <ul>
+          <li>個人情報</li>
+          <li>ウェブサイト上のデータ</li>
+          <li>ブラウジング履歴</li>
+          <li>その他のユーザーデータ</li>
+        </ul>
+      </section>
 
-<h2>ローカルストレージ</h2>
-設定情報のみをローカルストレージに保存し、外部に送信することはありません。
+      <section>
+        <h2>ローカルストレージ</h2>
+        <p>設定情報のみをローカルストレージに保存し、外部に送信することはありません。</p>
+      </section>
+    </main>
   </body>
-
 </html>
