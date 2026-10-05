@@ -40,7 +40,7 @@
       h1 {
         font-size: 1.75rem;
         font-weight: 700;
-        margin: 0 0 32px;
+        margin: 0 0 8px;
         padding-bottom: 16px;
         border-bottom: 2px solid var(--color-accent);
         color: var(--color-text);
@@ -57,13 +57,20 @@
         margin-top: 0;
       }
 
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 20px 0 6px;
+        color: var(--color-text);
+      }
+
       p {
         margin: 0 0 8px;
         color: var(--color-text);
       }
 
       ul {
-        margin: 8px 0 0;
+        margin: 8px 0 8px;
         padding-left: 1.4em;
         color: var(--color-text);
       }
@@ -74,6 +81,16 @@
 
       li::marker {
         color: var(--color-accent);
+      }
+
+      a {
+        color: var(--color-accent);
+      }
+
+      .meta {
+        margin: 0 0 24px;
+        font-size: 0.9rem;
+        color: var(--color-muted);
       }
 
       section + section {
@@ -88,27 +105,186 @@
       section:first-of-type {
         border-top: none;
       }
+
+      .lang-en {
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 2px solid var(--color-accent);
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 16px 12px;
+        }
+
+        main {
+          padding: 28px 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <main>
       <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日：2026年10月5日 ／ <a href="#en">English</a></p>
 
       <section>
-        <h2>データ収集について</h2>
-        <p>この拡張機能は以下のデータを収集・送信しません：</p>
+        <h2>対象</h2>
+        <p>このプライバシーポリシーは、M.Senga が Chrome ウェブストアで公開している次の拡張機能（以下「本拡張機能」）に適用されます。</p>
         <ul>
-          <li>個人情報</li>
-          <li>ウェブサイト上のデータ</li>
-          <li>ブラウジング履歴</li>
-          <li>その他のユーザーデータ</li>
+          <li><a href="#check-hiro">チェックひろ</a></li>
+          <li><a href="#copy-hiro">コピひろ</a></li>
+          <li><a href="#kaijo-hiro">解錠ひろ</a></li>
+          <li><a href="#nimotsu-hiro">にもつひろ</a></li>
+          <li><a href="#giga-hiro">ギガひろ</a></li>
+          <li><a href="#tre-hiro">トレひろ</a></li>
         </ul>
       </section>
 
       <section>
-        <h2>ローカルストレージ</h2>
-        <p>設定情報のみをローカルストレージに保存し、外部に送信することはありません。</p>
+        <h2>1. 収集・送信しない情報</h2>
+        <p>本拡張機能は、個人情報、閲覧履歴、閲覧しているページの内容などのユーザーデータを収集せず、開発者や第三者に送信しません（にもつひろで、利用者がボタンを押して運送会社のページを開く場合を除きます。4. を参照）。</p>
+        <ul>
+          <li>開発者のサーバーや外部のサーバーと通信しません</li>
+          <li>アクセス解析、広告、トラッキングの仕組みは使っていません</li>
+          <li>外部からプログラムを読み込んで実行しません</li>
+        </ul>
       </section>
+
+      <section>
+        <h2>2. ブラウザの中での情報の扱い</h2>
+        <p>本拡張機能は、それぞれの機能に必要な範囲でだけ、ページ上の情報をブラウザの中で読み取ります。読み取った情報はその場で機能のために使うだけで、記録も送信もしません。拡張機能ごとの内容は 4. で説明します。</p>
+      </section>
+
+      <section>
+        <h2>3. ブラウザに保存する情報</h2>
+        <p>一部の拡張機能は、利用者が選んだ設定だけを、Chrome の拡張機能用ストレージ（chrome.storage.sync）に保存します。</p>
+        <ul>
+          <li>チェックひろ：機能のオン／オフ</li>
+          <li>ギガひろ：ギガファイル便の保持期限と、ギガワタスの保存日数（日数 2 つ）</li>
+          <li>トレひろ：機能のオン／オフ、カードの幅、説明欄とコメント欄の比率、カードの色付けのオン／オフ、色の濃さ</li>
+          <li>コピひろ・解錠ひろ・にもつひろ：何も保存しません</li>
+        </ul>
+        <p>Chrome の同期が有効な場合、これらの設定は Chrome の同期機能によって、同じ Google アカウントでログインしている Chrome の間で同期されます。開発者がこの設定を受け取ることはありません。拡張機能を削除すると、設定も削除されます。</p>
+      </section>
+
+      <section>
+        <h2>4. 拡張機能ごとの情報の取り扱い</h2>
+
+        <h3 id="check-hiro">チェックひろ</h3>
+        <p>すべてのウェブページで動作します。チェックボックスがクリックされたときに、同じページにあるチェックボックスの並びと状態を読み取り、範囲をまとめて切り替えます。ページの内容を記録・送信することはありません。</p>
+
+        <h3 id="copy-hiro">コピひろ</h3>
+        <p>右クリックメニューで項目を選んだときにだけ、右クリックした表（または、ページ上のすべての表）の文字を読み取り、タブ区切りテキストまたは Markdown に変換して、クリップボードに書き込みます。どの表が右クリックされたかを特定するため、右クリックした位置の要素を、そのページのメモリ上に直近の 1 件だけ保持します。クリップボードの内容を読み取ることはありません。コピーすると、それまでクリップボードにあった内容は上書きされます。</p>
+
+        <h3 id="kaijo-hiro">解錠ひろ</h3>
+        <p>右クリックメニューで項目を選んだときにだけ、そのタブのページにある disabled 属性と disabled クラスを取り除き、解除した件数を画面に表示します。ページの内容を記録・送信することはありません。</p>
+
+        <h3 id="nimotsu-hiro">にもつひろ</h3>
+        <p>Google 検索の結果ページ（www.google.com と www.google.co.jp）でだけ動作します。ページの URL に含まれる検索語が伝票番号の形式かどうかを、ブラウザの中で判定します。検索語を保存・送信することはありません。</p>
+        <p>表示されたボタンを利用者が押すと、運送会社（ヤマト運輸・佐川急便・日本郵便）の追跡ページが新しいタブで開き、伝票番号がそのページの URL の一部として運送会社に渡ります。このとき、検索結果ページの URL（検索語）が参照元として送られることはありません。運送会社のサイトでの情報の取り扱いには、各社のプライバシーポリシーが適用されます。</p>
+
+        <h3 id="giga-hiro">ギガひろ</h3>
+        <p>ギガファイル便とギガワタスのページでだけ動作し、アップロード画面の保存期限の選択肢を、設定した日数に選びます。そのために、選択肢のボタンの文字と選択状態を読み取ります。ギガワタスでは、画面の切り替わりを知るためにページの URL も読み取ります。アップロードするファイルの中身やファイル名には触れません。</p>
+
+        <h3 id="tre-hiro">トレひろ</h3>
+        <p>Trello（trello.com）のページでだけ動作し、カード詳細の表示幅を変えたり、ボードのカードをラベルの色で塗り分けたりします。そのために、ページ上のカードの位置とラベルの色を読み取ります。カードの名前や内容を記録・送信することはありません。</p>
+      </section>
+
+      <section>
+        <h2>5. 第三者への提供</h2>
+        <p>本拡張機能は、利用者のデータを第三者に販売・提供・共有しません。</p>
+      </section>
+
+      <section>
+        <h2>6. Chrome ウェブストアのポリシーへの準拠</h2>
+        <p>本拡張機能による情報の使用は、Chrome ウェブストアのユーザーデータに関するポリシー（Chrome Web Store User Data Policy）に、Limited Use（使用の制限）の要件も含めて準拠しています。</p>
+      </section>
+
+      <section>
+        <h2>7. 本ポリシーの変更</h2>
+        <p>本ポリシーを変更する場合は、このページを更新し、冒頭の最終更新日を改めます。情報の取り扱いを変える場合は、その変更を含む版を公開する前に、このページを更新します。</p>
+      </section>
+
+      <section>
+        <h2>8. お問い合わせ</h2>
+        <p>本ポリシーと本拡張機能に関するお問い合わせは、次のメールアドレスまでお願いします（Chrome ウェブストアの各拡張機能のページに表示している、デベロッパーの連絡先です）。</p>
+        <p><a href="mailto:contact@love-live.jp">contact@love-live.jp</a></p>
+      </section>
+
+      <div class="lang-en" id="en" lang="en">
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: October 5, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
+
+        <section>
+          <h2>Scope</h2>
+          <p>This policy applies to the following extensions published by M.Senga on the Chrome Web Store (the "Extensions"): Check-Hiro (チェックひろ), Copy-Hiro (コピひろ), Kaijo-Hiro (解錠ひろ), Nimotsu-Hiro (にもつひろ), Giga-Hiro (ギガひろ), and Tre-Hiro (トレひろ).</p>
+        </section>
+
+        <section>
+          <h2>1. Information we do not collect or transmit</h2>
+          <p>The Extensions do not collect user data such as personal information, browsing history, or the content of the pages you visit, and do not send it to the developer or any third party (except when you click a button in Nimotsu-Hiro to open a carrier's page; see section 4).</p>
+          <ul>
+            <li>They do not communicate with the developer's or any external server.</li>
+            <li>They contain no analytics, advertising, or tracking.</li>
+            <li>They do not load or run remote code.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>2. Information handled inside the browser</h2>
+          <p>Each Extension reads information on the page inside your browser only as far as its single feature requires. That information is used on the spot and is never recorded or transmitted. Details for each Extension are in section 4.</p>
+        </section>
+
+        <section>
+          <h2>3. Information stored in the browser</h2>
+          <p>Some Extensions store only the settings you choose, in Chrome's extension storage (chrome.storage.sync):</p>
+          <ul>
+            <li>Check-Hiro: whether the feature is on or off</li>
+            <li>Giga-Hiro: the retention periods for GigaFile and Giga-Watasu (two numbers of days)</li>
+            <li>Tre-Hiro: on/off, card width, the ratio between the description and comment columns, card coloring on/off, and color strength</li>
+            <li>Copy-Hiro, Kaijo-Hiro, and Nimotsu-Hiro store nothing.</li>
+          </ul>
+          <p>If Chrome sync is turned on, Chrome may sync these settings across the Chrome browsers signed in to the same Google Account. The developer never receives them. Uninstalling an Extension removes its settings.</p>
+        </section>
+
+        <section>
+          <h2>4. How each Extension handles information</h2>
+          <h3>Check-Hiro</h3>
+          <p>Runs on all web pages. When you click a checkbox, it reads the order and state of the checkboxes on the same page to toggle a range of them. It does not record or transmit page content.</p>
+          <h3>Copy-Hiro</h3>
+          <p>Only when you choose a context-menu item, it reads the text of the right-clicked table (or of all tables on the page), converts it to tab-separated text or Markdown, and writes it to the clipboard. To know which table was right-clicked, it keeps a reference to the most recently right-clicked element in the page's memory. It never reads the clipboard. Copying overwrites the previous clipboard content.</p>
+          <h3>Kaijo-Hiro</h3>
+          <p>Only when you choose its context-menu item, it removes disabled attributes and the disabled class from the page in that tab and shows how many elements were unlocked. It does not record or transmit page content.</p>
+          <h3>Nimotsu-Hiro</h3>
+          <p>Runs only on Google Search results pages (www.google.com and www.google.co.jp). It checks inside the browser whether the search term in the page URL looks like a tracking number. Search terms are never stored or transmitted.</p>
+          <p>When you click one of the buttons it shows, the carrier's tracking page (Yamato Transport, Sagawa Express, or Japan Post) opens in a new tab, and the tracking number is passed to that carrier as part of the page URL. The URL of your search results page (your search terms) is not sent as the referrer. Each carrier's privacy policy applies to its website.</p>
+          <h3>Giga-Hiro</h3>
+          <p>Runs only on GigaFile and Giga-Watasu pages and selects the retention period you set on the upload screen. To do so, it reads the text and selection state of the option buttons, and on Giga-Watasu it also reads the page URL to detect screen changes. It never touches the files you upload or their names.</p>
+          <h3>Tre-Hiro</h3>
+          <p>Runs only on Trello (trello.com). It widens the card detail view and colors board cards by their labels. To do so, it reads the position of cards and the colors of their labels on the page. It does not record or transmit card names or content.</p>
+        </section>
+
+        <section>
+          <h2>5. Sharing with third parties</h2>
+          <p>The Extensions do not sell, transfer, or share user data with third parties.</p>
+        </section>
+
+        <section>
+          <h2>6. Compliance with Chrome Web Store policies</h2>
+          <p>The use of information by the Extensions complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+        </section>
+
+        <section>
+          <h2>7. Changes to this policy</h2>
+          <p>If this policy changes, this page will be updated along with the "Last updated" date. If the handling of information changes, this page will be updated before the version containing that change is published.</p>
+        </section>
+
+        <section>
+          <h2>8. Contact</h2>
+          <p>For questions about this policy or the Extensions, please email <a href="mailto:contact@love-live.jp">contact@love-live.jp</a> (the developer contact shown on each Extension's Chrome Web Store page).</p>
+        </section>
+      </div>
     </main>
   </body>
 </html>
