@@ -126,7 +126,7 @@
   <body>
     <main>
       <h1>プライバシーポリシー</h1>
-      <p class="meta">最終更新日：2026年10月22日 ／ <a href="#en">English</a></p>
+      <p class="meta">最終更新日：2026年10月26日 ／ <a href="#en">English</a></p>
 
       <section>
         <h2>対象</h2>
@@ -162,7 +162,7 @@
         <ul>
           <li>チェックひろ：機能のオン／オフ</li>
           <li>ギガひろ：ギガファイル便の保持期限と、ギガワタスの保存日数（日数 2 つ）</li>
-          <li>トレひろ：機能のオン／オフ、カードの幅、説明欄とコメント欄の比率、自動化ボタンの表示のオン／オフ、カードの色付けのオン／オフ、色の濃さ、色の鮮やかさ</li>
+          <li>トレひろ：機能のオン／オフ、カードの幅、説明欄とコメント欄の比率、自動化ボタンの表示のオン／オフ、カードの色付けのオン／オフ、色の濃さ、色の鮮やかさ、リスト ID の表示のオン／オフ、変更履歴ボタンの表示のオン／オフ、ショートカット「c」の無効化のオン／オフ</li>
           <li>コピひろ・解錠ひろ・にもつひろ：何も保存しません</li>
         </ul>
         <p>Chrome の同期が有効な場合、これらの設定は Chrome の同期機能によって、同じ Google アカウントでログインしている Chrome の間で同期されます。開発者がこの設定を受け取ることはありません。拡張機能を削除すると、設定も削除されます。</p>
@@ -188,7 +188,8 @@
         <p>ギガファイル便とギガワタスのページでだけ動作し、アップロード画面の保存期限の選択肢を、設定した日数に選びます。そのために、選択肢のボタンの文字と選択状態を読み取ります。ギガワタスでは、画面の切り替わりを知るためにページの URL も読み取ります。アップロードするファイルの中身やファイル名には触れません。</p>
 
         <h3 id="tre-hiro">トレひろ</h3>
-        <p>Trello（trello.com）のページでだけ動作し、カード詳細の表示幅を変えたり、Trello の「自動化」の一覧にあるボタン（カードボタン）をカード詳細の下部に並べたり、カードの URL をコピーするボタンを置いたり、ボードのカードをラベルの色で塗り分けたりします。そのために、ページ上のカードの位置とラベルの色、「自動化」の一覧にあるボタンの名前とアイコンを読み取ります。一覧は画面に出さずに開いて読み、すぐに閉じます。並べたボタンを利用者が押すと、Trello の画面にある同じボタンを押します（ボタンの処理を実行するのは Trello です）。URL のコピーボタンを利用者が押すと、表示中のページのアドレスからカードの URL（カード ID を含み、カード名は含みません）を作り、クリップボードにコピーします。カードの名前や内容を記録・送信することはありません。</p>
+        <p>Trello（trello.com）のページでだけ動作し、カード詳細の表示幅を変えたり、Trello の「自動化」の一覧にあるボタン（カードボタン）をカード詳細の下部に並べたり、カードの URL をコピーするボタンを置いたり、ボードのカードをラベルの色で塗り分けたりします。そのために、ページ上のカードの位置とラベルの色、「自動化」の一覧にあるボタンの名前とアイコンを読み取ります。一覧は画面に出さずに開いて読み、すぐに閉じます。並べたボタンを利用者が押すと、Trello の画面にある同じボタンを押します（ボタンの処理を実行するのは Trello です）。URL のコピーボタンを利用者が押すと、表示中のページのアドレスからカードの URL（カード ID を含み、カード名は含みません）を作り、クリップボードにコピーします。</p>
+        <p>また、ボードの各リストの見出しにリスト ID を表示し、カード詳細にカードの変更履歴を開くボタンを置きます。利用者が設定で選んだ場合は、キーボードショートカット「c」（カードのアーカイブ）を無効にします。リスト ID は、ページ上の各リストの要素に付いている ID を読み取って表示し、利用者が押すとその ID をクリップボードにコピーします。変更履歴のボタンを利用者が押すと、表示中のページのアドレスからカード ID を読み取り、そのカードの変更履歴を返す Trello の API の URL（https://trello.com/1/cards/{カード ID}/actions?filter=updateCard&amp;limit=1000）を新しいタブで開きます。そのページは、ログインしている Trello のページを利用者が開くときと同じように、ブラウザが trello.com から読み込みます。本拡張機能自身は通信せず、開いたページの内容も読み取りません。「c」の無効化では、入力欄に入力していないときに押されたキーが修飾キーなしの「c」かどうかだけを判定し、そうであればその操作を止めて、画面に通知を表示します。カードの名前や内容、キー入力を記録・送信することはありません。</p>
       </section>
 
       <section>
@@ -214,7 +215,7 @@
 
       <div class="lang-en" id="en" lang="en">
         <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: October 22, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
+        <p class="meta">Last updated: October 26, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
 
         <section>
           <h2>Scope</h2>
@@ -242,7 +243,7 @@
           <ul>
             <li>Check-Hiro: whether the feature is on or off</li>
             <li>Giga-Hiro: the retention periods for GigaFile and Giga-Watasu (two numbers of days)</li>
-            <li>Tre-Hiro: on/off, card width, the ratio between the description and comment columns, showing automation buttons on/off, card coloring on/off, color strength, and color vibrancy</li>
+            <li>Tre-Hiro: on/off, card width, the ratio between the description and comment columns, showing automation buttons on/off, card coloring on/off, color strength, color vibrancy, showing list IDs on/off, showing the change history button on/off, and disabling the "c" shortcut on/off</li>
             <li>Copy-Hiro, Kaijo-Hiro, and Nimotsu-Hiro store nothing.</li>
           </ul>
           <p>If Chrome sync is turned on, Chrome may sync these settings across the Chrome browsers signed in to the same Google Account. The developer never receives them. Uninstalling an Extension removes its settings.</p>
@@ -262,7 +263,8 @@
           <h3>Giga-Hiro</h3>
           <p>Runs only on GigaFile and Giga-Watasu pages and selects the retention period you set on the upload screen. To do so, it reads the text and selection state of the option buttons, and on Giga-Watasu it also reads the page URL to detect screen changes. It never touches the files you upload or their names.</p>
           <h3>Tre-Hiro</h3>
-          <p>Runs only on Trello (trello.com). It widens the card detail view, shows the buttons from Trello's "Automation" list (card buttons) at the bottom of the card detail view, adds a button that copies the card's URL, and colors board cards by their labels. To do so, it reads the position of cards and the colors of their labels on the page, and the names and icons of the buttons in the "Automation" list. It opens that list without showing it on screen, reads it, and closes it right away. When you press one of the buttons it shows, it presses the same button on the Trello page (Trello performs the button's actions). When you press the copy button, it builds the card's URL (which contains the card ID but not the card name) from the address of the current page and copies it to the clipboard. It does not record or transmit card names or content.</p>
+          <p>Runs only on Trello (trello.com). It widens the card detail view, shows the buttons from Trello's "Automation" list (card buttons) at the bottom of the card detail view, adds a button that copies the card's URL, and colors board cards by their labels. To do so, it reads the position of cards and the colors of their labels on the page, and the names and icons of the buttons in the "Automation" list. It opens that list without showing it on screen, reads it, and closes it right away. When you press one of the buttons it shows, it presses the same button on the Trello page (Trello performs the button's actions). When you press the copy button, it builds the card's URL (which contains the card ID but not the card name) from the address of the current page and copies it to the clipboard.</p>
+          <p>It also shows the list ID in the header of each list on a board and adds a button to the card detail view that opens the card's change history. If you turn on the setting, it disables the "c" keyboard shortcut (archive card). For list IDs, it reads the ID attached to each list element on the page and shows it; when you press it, it copies that ID to the clipboard. When you press the history button, it reads the card ID from the address of the current page and opens, in a new tab, the URL of Trello's API that returns the card's change history (https://trello.com/1/cards/{card ID}/actions?filter=updateCard&amp;limit=1000). Your browser loads that page from trello.com in the same way as any Trello page you open while signed in. The Extension itself does not communicate with any server and does not read the page that opens. To disable the "c" shortcut, it checks only whether a key pressed while you are not typing in a text field is "c" without modifier keys; if so, it stops that action and shows a notice on screen. It does not record or transmit card names, card content, or keystrokes.</p>
         </section>
 
         <section>
