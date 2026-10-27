@@ -126,7 +126,7 @@
   <body>
     <main>
       <h1>プライバシーポリシー</h1>
-      <p class="meta">最終更新日：2026年10月26日 ／ <a href="#en">English</a></p>
+      <p class="meta">最終更新日：2026年10月27日 ／ <a href="#en">English</a></p>
 
       <section>
         <h2>対象</h2>
@@ -153,7 +153,7 @@
 
       <section>
         <h2>2. ブラウザの中での情報の扱い</h2>
-        <p>本拡張機能は、それぞれの機能に必要な範囲でだけ、ページ上の情報をブラウザの中で読み取ります。読み取った情報はその場で機能のために使うだけで、記録も送信もしません。拡張機能ごとの内容は 4. で説明します。</p>
+        <p>本拡張機能は、それぞれの機能に必要な範囲でだけ、ページ上の情報をブラウザの中で読み取ります。読み取った情報はその場で機能のために使うだけで、記録も送信もしません（トレひろで、利用者が設定に追加したボードの ID と名前を除きます。3. を参照）。拡張機能ごとの内容は 4. で説明します。</p>
       </section>
 
       <section>
@@ -162,7 +162,7 @@
         <ul>
           <li>チェックひろ：機能のオン／オフ</li>
           <li>ギガひろ：ギガファイル便の保持期限と、ギガワタスの保存日数（日数 2 つ）</li>
-          <li>トレひろ：機能のオン／オフ、カードの幅、説明欄とコメント欄の比率、自動化ボタンの表示のオン／オフ、カードの色付けのオン／オフ、色の濃さ、色の鮮やかさ、リスト ID の表示のオン／オフ、変更履歴ボタンの表示のオン／オフ、ショートカット「c」の無効化のオン／オフ</li>
+          <li>トレひろ：機能のオン／オフ、カードの幅、説明欄とコメント欄の比率、自動化ボタンの表示のオン／オフ、自動化ボタンを表示するボードの一覧（利用者が追加したボードの ID と名前）、カードの色付けのオン／オフ、色の濃さ、色の鮮やかさ、リスト ID の表示のオン／オフ、変更履歴ボタンの表示のオン／オフ、ショートカット「c」の無効化のオン／オフ</li>
           <li>コピひろ・解錠ひろ・にもつひろ：何も保存しません</li>
         </ul>
         <p>Chrome の同期が有効な場合、これらの設定は Chrome の同期機能によって、同じ Google アカウントでログインしている Chrome の間で同期されます。開発者がこの設定を受け取ることはありません。拡張機能を削除すると、設定も削除されます。</p>
@@ -189,7 +189,8 @@
 
         <h3 id="tre-hiro">トレひろ</h3>
         <p>Trello（trello.com）のページでだけ動作し、カード詳細の表示幅を変えたり、Trello の「自動化」の一覧にあるボタン（カードボタン）をカード詳細の下部に並べたり、カードの URL をコピーするボタンを置いたり、ボードのカードをラベルの色で塗り分けたりします。そのために、ページ上のカードの位置とラベルの色、「自動化」の一覧にあるボタンの名前とアイコンを読み取ります。一覧は画面に出さずに開いて読み、すぐに閉じます。並べたボタンを利用者が押すと、Trello の画面にある同じボタンを押します（ボタンの処理を実行するのは Trello です）。URL のコピーボタンを利用者が押すと、表示中のページのアドレスからカードの URL（カード ID を含み、カード名は含みません）を作り、クリップボードにコピーします。</p>
-        <p>また、ボードの各リストの見出しにリスト ID を表示し、カード詳細にカードの変更履歴を開くボタンを置きます。利用者が設定で選んだ場合は、キーボードショートカット「c」（カードのアーカイブ）を無効にします。リスト ID は、ページ上の各リストの要素に付いている ID を読み取って表示し、利用者が押すとその ID をクリップボードにコピーします。変更履歴のボタンを利用者が押すと、表示中のページのアドレスからカード ID を読み取り、そのカードの変更履歴を返す Trello の API の URL（https://trello.com/1/cards/{カード ID}/actions?filter=updateCard&amp;limit=1000）を新しいタブで開きます。そのページは、ログインしている Trello のページを利用者が開くときと同じように、ブラウザが trello.com から読み込みます。本拡張機能自身は通信せず、開いたページの内容も読み取りません。「c」の無効化では、入力欄に入力していないときに押されたキーが修飾キーなしの「c」かどうかだけを判定し、そうであればその操作を止めて、画面に通知を表示します。カードの名前や内容、キー入力を記録・送信することはありません。</p>
+        <p>また、ボードの各リストの見出しにリスト ID を表示し、カード詳細にカードの変更履歴を開くボタンを置きます。利用者が設定で選んだ場合は、キーボードショートカット「c」（カードのアーカイブ）を無効にします。リスト ID は、ページ上の各リストの要素に付いている ID を読み取って表示し、利用者が押すとその ID をクリップボードにコピーします。変更履歴のボタンを利用者が押すと、表示中のページのアドレスからカード ID を読み取り、そのカードの変更履歴を返す Trello の API の URL（https://trello.com/1/cards/{カード ID}/actions?filter=updateCard&amp;limit=1000）を新しいタブで開きます。そのページは、ログインしている Trello のページを利用者が開くときと同じように、ブラウザが trello.com から読み込みます。このボタンでは、本拡張機能自身は通信せず、開いたページの内容も読み取りません。「c」の無効化では、入力欄に入力していないときに押されたキーが修飾キーなしの「c」かどうかだけを判定し、そうであればその操作を止めて、画面に通知を表示します。カードの名前や内容、キー入力を記録・送信することはありません。</p>
+        <p>自動化ボタンを常に表示する設定をオフにしても、利用者が設定で追加したボードでは自動化ボタンを並べます。ボードを追加するボタンを利用者が押すと、表示中のページのアドレスからボードまたはカードの ID を読み取り、Trello の API（https://trello.com/1/boards/{ボード ID} または https://trello.com/1/cards/{カード ID}/board）にブラウザから問い合わせて、そのボードの ID と名前を受け取り、設定として保存します（3. を参照）。また、この設定を使っている間は、カード詳細を開いたときに、そのカードがどのボードのものかを同じ API で調べます（受け取るのはボードの ID と名前だけで、カードごとに 1 回、ページを開いている間だけ覚えます）。問い合わせ先は利用中の Trello（trello.com）だけで、ログインしている Trello のページと同じように扱われます。開発者や第三者のサーバーとは通信しません。保存したボードの ID と名前は、Chrome の同期機能による同期を除き、どこにも送信しません。</p>
       </section>
 
       <section>
@@ -215,7 +216,7 @@
 
       <div class="lang-en" id="en" lang="en">
         <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: October 26, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
+        <p class="meta">Last updated: October 27, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
 
         <section>
           <h2>Scope</h2>
@@ -234,7 +235,7 @@
 
         <section>
           <h2>2. Information handled inside the browser</h2>
-          <p>Each Extension reads information on the page inside your browser only as far as its single feature requires. That information is used on the spot and is never recorded or transmitted. Details for each Extension are in section 4.</p>
+          <p>Each Extension reads information on the page inside your browser only as far as its single feature requires. That information is used on the spot and is never recorded or transmitted (except the IDs and names of boards you add to Tre-Hiro's settings; see section 3). Details for each Extension are in section 4.</p>
         </section>
 
         <section>
@@ -243,7 +244,7 @@
           <ul>
             <li>Check-Hiro: whether the feature is on or off</li>
             <li>Giga-Hiro: the retention periods for GigaFile and Giga-Watasu (two numbers of days)</li>
-            <li>Tre-Hiro: on/off, card width, the ratio between the description and comment columns, showing automation buttons on/off, card coloring on/off, color strength, color vibrancy, showing list IDs on/off, showing the change history button on/off, and disabling the "c" shortcut on/off</li>
+            <li>Tre-Hiro: on/off, card width, the ratio between the description and comment columns, showing automation buttons on/off, the list of boards on which to show automation buttons (the IDs and names of the boards you add), card coloring on/off, color strength, color vibrancy, showing list IDs on/off, showing the change history button on/off, and disabling the "c" shortcut on/off</li>
             <li>Copy-Hiro, Kaijo-Hiro, and Nimotsu-Hiro store nothing.</li>
           </ul>
           <p>If Chrome sync is turned on, Chrome may sync these settings across the Chrome browsers signed in to the same Google Account. The developer never receives them. Uninstalling an Extension removes its settings.</p>
@@ -264,7 +265,8 @@
           <p>Runs only on GigaFile and Giga-Watasu pages and selects the retention period you set on the upload screen. To do so, it reads the text and selection state of the option buttons, and on Giga-Watasu it also reads the page URL to detect screen changes. It never touches the files you upload or their names.</p>
           <h3>Tre-Hiro</h3>
           <p>Runs only on Trello (trello.com). It widens the card detail view, shows the buttons from Trello's "Automation" list (card buttons) at the bottom of the card detail view, adds a button that copies the card's URL, and colors board cards by their labels. To do so, it reads the position of cards and the colors of their labels on the page, and the names and icons of the buttons in the "Automation" list. It opens that list without showing it on screen, reads it, and closes it right away. When you press one of the buttons it shows, it presses the same button on the Trello page (Trello performs the button's actions). When you press the copy button, it builds the card's URL (which contains the card ID but not the card name) from the address of the current page and copies it to the clipboard.</p>
-          <p>It also shows the list ID in the header of each list on a board and adds a button to the card detail view that opens the card's change history. If you turn on the setting, it disables the "c" keyboard shortcut (archive card). For list IDs, it reads the ID attached to each list element on the page and shows it; when you press it, it copies that ID to the clipboard. When you press the history button, it reads the card ID from the address of the current page and opens, in a new tab, the URL of Trello's API that returns the card's change history (https://trello.com/1/cards/{card ID}/actions?filter=updateCard&amp;limit=1000). Your browser loads that page from trello.com in the same way as any Trello page you open while signed in. The Extension itself does not communicate with any server and does not read the page that opens. To disable the "c" shortcut, it checks only whether a key pressed while you are not typing in a text field is "c" without modifier keys; if so, it stops that action and shows a notice on screen. It does not record or transmit card names, card content, or keystrokes.</p>
+          <p>It also shows the list ID in the header of each list on a board and adds a button to the card detail view that opens the card's change history. If you turn on the setting, it disables the "c" keyboard shortcut (archive card). For list IDs, it reads the ID attached to each list element on the page and shows it; when you press it, it copies that ID to the clipboard. When you press the history button, it reads the card ID from the address of the current page and opens, in a new tab, the URL of Trello's API that returns the card's change history (https://trello.com/1/cards/{card ID}/actions?filter=updateCard&amp;limit=1000). Your browser loads that page from trello.com in the same way as any Trello page you open while signed in. For this button, the Extension itself does not communicate with any server and does not read the page that opens. To disable the "c" shortcut, it checks only whether a key pressed while you are not typing in a text field is "c" without modifier keys; if so, it stops that action and shows a notice on screen. It does not record or transmit card names, card content, or keystrokes.</p>
+          <p>Even when the setting to always show automation buttons is off, it shows them on boards you have added in the settings. When you press the button to add a board, it reads the board or card ID from the address of the current page, asks Trello's API (https://trello.com/1/boards/{board ID} or https://trello.com/1/cards/{card ID}/board) from your browser, receives that board's ID and name, and saves them as a setting (see section 3). While this setting is in use, it also uses the same API to find which board a card belongs to when you open the card detail view (it receives only the board's ID and name, once per card, and keeps them only while the page is open). These requests go only to Trello (trello.com), which handles them in the same way as any Trello page you open while signed in. The Extension does not communicate with the developer's or any third-party server. The saved board IDs and names are never transmitted anywhere, except through Chrome sync.</p>
         </section>
 
         <section>
